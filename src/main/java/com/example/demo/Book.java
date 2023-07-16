@@ -1,10 +1,12 @@
 package com.example.demo;
 
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
-import static javax.persistence.GenerationType.SEQUENCE;
+import static jakarta.persistence.GenerationType.SEQUENCE;
+
 
 @Entity(name = "Book")
 @Table(name = "book")

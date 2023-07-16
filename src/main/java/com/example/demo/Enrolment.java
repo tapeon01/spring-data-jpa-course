@@ -1,6 +1,7 @@
 package com.example.demo;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
 @Entity(name = "Enrolment")

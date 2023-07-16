@@ -69,7 +69,6 @@ public class Application {
             ));
 
 
-
             studentRepository.save(student);
 
             studentRepository.findById(1L)

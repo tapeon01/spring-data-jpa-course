@@ -1,11 +1,13 @@
 package com.example.demo;
 
-import javax.persistence.*;
+
+import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static javax.persistence.GenerationType.SEQUENCE;
+import static jakarta.persistence.GenerationType.SEQUENCE;
+
 
 @Entity(name = "Student")
 @Table(

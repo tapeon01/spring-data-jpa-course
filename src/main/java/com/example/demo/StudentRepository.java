@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
@@ -12,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-@Transactional(readOnly = true)
+//@Transactional(readOnly = true)
 public interface StudentRepository extends PagingAndSortingRepository<Student, Long> {
     @Query("SELECT s FROM Student s WHERE s.email = ?1")
     Optional<Student> findStudentByEmail(String email);
@@ -31,5 +30,9 @@ public interface StudentRepository extends PagingAndSortingRepository<Student, L
     @Transactional
     @Modifying
     @Query("DELETE FROM Student u WHERE u.id = ?1")
-    int  deleteStudentById(Long id);
+    int deleteStudentById(Long id);
+
+    void save(Student student);
+
+    Optional<Student> findById(long l);
 }

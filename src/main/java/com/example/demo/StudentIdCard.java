@@ -1,8 +1,10 @@
 package com.example.demo;
 
-import javax.persistence.*;
 
-import static javax.persistence.GenerationType.SEQUENCE;
+import jakarta.persistence.*;
+
+import static jakarta.persistence.GenerationType.SEQUENCE;
+
 
 @Entity(name = "StudentIdCard")
 @Table(
